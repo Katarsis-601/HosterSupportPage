@@ -6,6 +6,7 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
+  background-color: #eeeeff;
 }
 button {
   border: none;
@@ -27,6 +28,7 @@ main {
 }
 
 .container {
+  max-width: 1440px;
   width: 90%;
   display: flex;
   align-items: center;
@@ -46,8 +48,6 @@ header {
 }
 header .container {
   margin-top: 20px;
-
-  max-width: 1360px;
   flex-direction: column;
   align-items: start;
 }
@@ -184,4 +184,102 @@ nav .account-btn {
     rgba(58, 58, 244, 0.07) 0%,
     rgba(58, 58, 244, 0) 77.26%
   );
+}
+article {
+  display: flex;
+  justify-content: center;
+}
+
+article .container {
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+article .content {
+  width: 100%;
+  display: grid;
+  padding-top: 81px;
+  padding-bottom: 76px;
+  column-gap: 30px;
+  row-gap: 52px;
+  grid-template-columns: auto auto auto;
+}
+article .content .card {
+  background-color: white;
+  max-width: 360px;
+  flex-flow: column wrap;
+  padding: 30px;
+  box-shadow: #ddddf0 0px 4px 12px;
+}
+
+.card .card-header {
+  display: flex;
+}
+
+.card-header h5 {
+  margin-left: 16px;
+  font-weight: 700;
+  line-height: 22.63px;
+  color: #060619;
+  font-size: 110%;
+}
+
+.card li {
+  font-size: 100%;
+  font-weight: 600;
+  line-height: 20.11px;
+  color: #060619;
+  display: flex;
+}
+.card li p {
+  margin-left: 8px;
+}
+.chat-support {
+  padding: 50px 0;
+  display: flex;
+  color: white;
+  background-color: #06061a;
+  justify-content: center;
+  border-top-right-radius: 20px;
+}
+.chat-support .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-support button {
+  max-width: 234px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 15px;
+  color: white;
+  background: #3a3af4;
+  border-radius: 10px;
+  padding: 6px 0;
+}
+.chat-support button h5 {
+  font-weight: 700;
+  font-size: 100%;
+}
+.chat-support .text-content {
+  max-width: 575px;
+  width: 100%;
+}
+.chat-support .text-content h5 {
+  font-weight: 600;
+  font-size: 190%;
+  margin: 0;
+  line-height: 44px;
+}
+.chat-support p {
+  font-size: 110%;
+  margin: 10px 0 0 0;
+  font-weight: 500;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
 }
