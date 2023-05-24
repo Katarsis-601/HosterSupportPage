@@ -192,6 +192,7 @@ article {
 }
 
 article .container {
+  flex-flow: row wrap;
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
@@ -321,8 +322,8 @@ article .content .card {
 }
 
 .link-information {
-  flex-flow: row wrap;
-  margin-left: 50px;
+  max-width: 575px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -342,9 +343,6 @@ article .content .card {
   font-size: 100%;
 }
 
-.link-information .company-information {
-  margin: 0 30px;
-}
 footer {
   padding: 50px 0;
   background-color: #06061a;
