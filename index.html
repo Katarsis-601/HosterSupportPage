@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Hoster Support Page By Katarsis-601</title>
 </head>
 
 <body>
@@ -403,7 +403,7 @@
         </section>
 
         <footer>
-            <h5>COPYRIGHT © 2022 — DESIGN NAUVAL</h5>
+            <h5>COPYRIGHT © 2022 — DESIGN NAUVAL — SLICING Katarsis-601</h5>
         </footer>
 
     </main>
@@ -435,6 +435,7 @@
                 navbarContainer.style.display = "none"
                 nav_status = false
                 navbar_img.src = "./assets/Icon_Hamburger.png"
+                navbarBtn.addEventListener("click", navbarHandler)
             } else {
                 navbarContainer.style.display = "block"
                 nav_status = false
@@ -442,19 +443,19 @@
         })
 
         if (window.innerWidth <= 500) {
-            navbarBtn.addEventListener("click", () => {
-                nav_status = !nav_status
-
-                if (nav_status) {
-                    navbarContainer.style.display = "flex"
-                    navbar_img.src = "./assets/Icon_Closed.png"
-                } else {
-                    navbarContainer.style.display = "none"
-                    navbar_img.src = "./assets/Icon_Hamburger.png"
-                }
-            })
+            navbarBtn.addEventListener("click", navbarHandler)
         }
+        function navbarHandler(ev) {
+            nav_status = !nav_status
 
+            if (nav_status) {
+                navbarContainer.style.display = "flex"
+                navbar_img.src = "./assets/Icon_Closed.png"
+            } else {
+                navbarContainer.style.display = "none"
+                navbar_img.src = "./assets/Icon_Hamburger.png"
+            }
+        }
     </script>
 </body>
 
