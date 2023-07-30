@@ -1,7 +1,7 @@
 # HOSTER SUPPORT PAGE
 ### Links
 
-- Live Site URL: [Click Here](https://hoster-support-page-9guo3wo7n-andrian-w.vercel.app/)
+- Live Site URL: [Click Here](https://hoster-support-page.vercel.app/)
 
 ### Built with
 
