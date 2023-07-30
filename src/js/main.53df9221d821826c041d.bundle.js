@@ -1,4 +1,10 @@
-import "./style.css";
+"use strict";
+(self["webpackChunkhostersupportpage"] = self["webpackChunkhostersupportpage"] || []).push([[179],{
+
+/***/ 138:
+/***/ (() => {
+
+
 
 let answerContent = document.querySelector(".answer-content");
 let backBtn = document.getElementsByClassName("reaction-back")[0];
@@ -47,3 +53,13 @@ function navbarHandler(ev) {
     navbar_img.src = "./assets/Icon_Hamburger.png";
   }
 }
+
+
+/***/ })
+
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__(138));
+/******/ }
+]);
