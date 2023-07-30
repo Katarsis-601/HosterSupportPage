@@ -26,7 +26,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nlet answerContent = document.querySelector(\".answer-content\");\nlet backBtn = document.getElementsByClassName(\"reaction-back\")[0];\nlet cardContent = document.querySelector(\"article .container .content\");\n\nlet navbarBtn = document.getElementsByClassName(\"navbar-btn\")[0];\nlet navbarContainer = document.getElementsByClassName(\"navbar-container\")[0];\nlet navbar_img = document.getElementsByClassName(\"navbar-img\")[0];\n\nlet nav_status = false;\n\ndocument.querySelectorAll(\"p.text-card\").forEach((data) => {\n  data.addEventListener(\"click\", () => {\n    answerContent.style.display = \"flex\";\n    cardContent.style.display = \"none\";\n  });\n});\nbackBtn.addEventListener(\"click\", () => {\n  answerContent.style.display = \"none\";\n  cardContent.style.display = \"grid\";\n});\nwindow.addEventListener(\"resize\", () => {\n  if (window.innerWidth <= 500) {\n    navbarContainer.style.display = \"none\";\n    nav_status = false;\n    navbar_img.src = \"./assets/Icon_Hamburger.png\";\n    navbarBtn.addEventListener(\"click\", navbarHandler);\n  } else {\n    navbarContainer.style.display = \"block\";\n    nav_status = false;\n  }\n});\n\nif (window.innerWidth <= 500) {\n  navbarBtn.addEventListener(\"click\", navbarHandler);\n}\n\nfunction navbarHandler(ev) {\n  nav_status = !nav_status;\n\n  if (nav_status) {\n    navbarContainer.style.display = \"flex\";\n    navbar_img.src = \"./assets/Icon_Closed.png\";\n  } else {\n    navbarContainer.style.display = \"none\";\n    navbar_img.src = \"./assets/Icon_Hamburger.png\";\n  }\n}\n\n\n//# sourceURL=webpack://hostersupportpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_Icon_Hamburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/Icon_Hamburger.png */ \"./src/assets/Icon_Hamburger.png\");\n/* harmony import */ var _assets_Icon_Closed_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/Icon_Closed.png */ \"./src/assets/Icon_Closed.png\");\n\n\n\n\nlet answerContent = document.querySelector(\".answer-content\");\nlet backBtn = document.getElementsByClassName(\"reaction-back\")[0];\nlet cardContent = document.querySelector(\"article .container .content\");\n\nlet navbarBtn = document.getElementsByClassName(\"navbar-btn\")[0];\nlet navbarContainer = document.getElementsByClassName(\"navbar-container\")[0];\nlet navbar_img = document.getElementsByClassName(\"navbar-img\")[0];\n\nlet nav_status = false;\n\ndocument.querySelectorAll(\"p.text-card\").forEach((data) => {\n  data.addEventListener(\"click\", () => {\n    answerContent.style.display = \"flex\";\n    cardContent.style.display = \"none\";\n  });\n});\nbackBtn.addEventListener(\"click\", () => {\n  answerContent.style.display = \"none\";\n  cardContent.style.display = \"grid\";\n});\nwindow.addEventListener(\"resize\", () => {\n  if (window.innerWidth <= 500) {\n    navbarContainer.style.display = \"none\";\n    nav_status = false;\n    navbar_img.src = _assets_Icon_Hamburger_png__WEBPACK_IMPORTED_MODULE_1__;\n    navbarBtn.addEventListener(\"click\", navbarHandler);\n  } else {\n    navbarContainer.style.display = \"block\";\n    nav_status = false;\n  }\n});\n\nif (window.innerWidth <= 500) {\n  navbarBtn.addEventListener(\"click\", navbarHandler);\n}\n\nfunction navbarHandler(ev) {\n  nav_status = !nav_status;\n\n  if (nav_status) {\n    navbarContainer.style.display = \"flex\";\n    navbar_img.src = _assets_Icon_Closed_png__WEBPACK_IMPORTED_MODULE_2__;\n  } else {\n    navbarContainer.style.display = \"none\";\n    navbar_img.src = _assets_Icon_Hamburger_png__WEBPACK_IMPORTED_MODULE_1__;\n  }\n}\n\n\n//# sourceURL=webpack://hostersupportpage/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/Icon_Closed.png":
+/*!************************************!*\
+  !*** ./src/assets/Icon_Closed.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/images/Icon_Closed..png\";\n\n//# sourceURL=webpack://hostersupportpage/./src/assets/Icon_Closed.png?");
+
+/***/ }),
+
+/***/ "./src/assets/Icon_Hamburger.png":
+/*!***************************************!*\
+  !*** ./src/assets/Icon_Hamburger.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/images/Icon_Hamburger..png\";\n\n//# sourceURL=webpack://hostersupportpage/./src/assets/Icon_Hamburger.png?");
 
 /***/ })
 
@@ -57,6 +77,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -66,6 +98,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl + "../../";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

@@ -1,4 +1,6 @@
 import "./style.css";
+import navbar_icon from "./assets/Icon_Hamburger.png";
+import navbar_icon_close from "./assets/Icon_Closed.png";
 
 let answerContent = document.querySelector(".answer-content");
 let backBtn = document.getElementsByClassName("reaction-back")[0];
@@ -24,7 +26,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth <= 500) {
     navbarContainer.style.display = "none";
     nav_status = false;
-    navbar_img.src = "./assets/Icon_Hamburger.png";
+    navbar_img.src = navbar_icon;
     navbarBtn.addEventListener("click", navbarHandler);
   } else {
     navbarContainer.style.display = "block";
@@ -41,9 +43,9 @@ function navbarHandler(ev) {
 
   if (nav_status) {
     navbarContainer.style.display = "flex";
-    navbar_img.src = "./assets/Icon_Closed.png";
+    navbar_img.src = navbar_icon_close;
   } else {
     navbarContainer.style.display = "none";
-    navbar_img.src = "./assets/Icon_Hamburger.png";
+    navbar_img.src = navbar_icon;
   }
 }
