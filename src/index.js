@@ -1,5 +1,5 @@
 import "./style.css";
-import "../index.html";
+
 let answerContent = document.querySelector(".answer-content");
 let backBtn = document.getElementsByClassName("reaction-back")[0];
 let cardContent = document.querySelector("article .container .content");
@@ -9,7 +9,6 @@ let navbarContainer = document.getElementsByClassName("navbar-container")[0];
 let navbar_img = document.getElementsByClassName("navbar-img")[0];
 
 let nav_status = false;
-let width = 0;
 
 document.querySelectorAll("p.text-card").forEach((data) => {
   data.addEventListener("click", () => {

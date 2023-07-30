@@ -4,7 +4,10 @@
   "description": "- Live Site URL: [Click Here](https://hoster-support-page.vercel.app/)",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -c webpack.dev.js"
+    "dev": "webpack -c webpack.dev.js",
+    "serve": "lite-server --baseDir=./dist/",
+    "production": "webpack -c webpack.production.js",
+    "build": "npm run dev & npm run serve"
   },
   "author": "katarsis-601",
   "license": "ISC",

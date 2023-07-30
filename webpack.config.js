@@ -7,7 +7,7 @@ module.exports = {
   output: { clean: true, assetModuleFilename: "src/images/[name].[ext]" },
   module: {
     rules: [
-      { test: /\.css$/i, use: ["style-loader", "css-loader"] },
+      { test: /\.css$/i, use: [MiniCssExtractPlugin.loader, "css-loader"] },
       {
         test: /\.(png|jpg|jpeg|svg)$/i,
         type: "asset/resource",
@@ -20,5 +20,17 @@ module.exports = {
         },
       },
     ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "src/css/[name].css",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+    }),
+  ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
   },
 };
