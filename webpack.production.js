@@ -1,27 +1,23 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const config = require("webpack.config.js");
+const config = require("./webpack.config.js");
 const { merge } = require("webpack-merge");
 const path = require("path");
-module.exports = {
+module.exports = merge(config, {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "production"),
-    filename: "src/js/[main].[contenthash].[bundle].js",
-  },
-  module: {
-    rules: [
-      {
-        test: /.(png|jpg|jpeg|svg)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "src/assets/[contenthash].[ext]",
-        },
-      },
-    ],
+    filename: "src/js/main.[contenthash].bundle.js",
+    chunkFilename: "[name].js",
+    assetModuleFilename: "src/images/[hash].[ext]",
+    clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "src/css/[contenthash].[ext]",
+      filename: "src/css/[contenthash].css",
+      chunkFilename: "[name].css",
     }),
   ],
-};
+  optimization: {
+    runtimeChunk: "single",
+  },
+});
